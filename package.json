@@ -1,0 +1,13 @@
+{
+  "name": "@msl-ai-os/auditiq",
+  "version": "2.0.0",
+  "description": "AuditIQ — AI Business Intelligence & Readiness Platform by MSL AI Systems",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test tests/auditiq.test.mjs"
+  },
+  "author": "Muhsin Alonigbeja — MSL AI Systems",
+  "license": "UNLICENSED"
+}

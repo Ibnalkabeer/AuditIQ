@@ -1,0 +1,15 @@
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+
+# Dependencies & Build Artifacts
+node_modules/
+.vercel/
+
+# Reverse-Engineering Scratch & Verification Captures
+rea-bundle/
+verification-screenshots/
+*.log
+.DS_Store
+Thumbs.db

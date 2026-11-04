@@ -1,0 +1,81 @@
+/**
+ * AuditIQ UI/UX Pro Max & Enhance-UI Refinement Layer
+ * Preserves the exact layout structure while resolving focus/selection collisions (BUG-01),
+ * sticky bar overlap (BUG-03), card elevation, and print typography.
+ */
+
+/* 1. BUG-01 Fix: Strict Separation of Selected State vs Keyboard Focus */
+[role="radio"],
+[role="checkbox"] {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Mouse/touch focus on unselected cards must NEVER render a second blue border */
+[role="radio"][aria-checked="false"]:focus:not(:focus-visible),
+[role="checkbox"][aria-checked="false"]:focus:not(:focus-visible) {
+  outline: none !important;
+  box-shadow: 0 1px 2px 0 rgba(20, 22, 27, 0.03) !important;
+  border-color: rgba(107, 114, 128, 0.18) !important;
+  background-color: #ffffff !important;
+}
+
+/* Unselected card hover polish */
+[role="radio"][aria-checked="false"]:hover,
+[role="checkbox"][aria-checked="false"]:hover {
+  border-color: rgba(52, 80, 255, 0.35) !important;
+  background-color: rgba(246, 247, 249, 0.65) !important;
+  box-shadow: 0 4px 12px -2px rgba(20, 22, 27, 0.05) !important;
+}
+
+/* Selected card authoritative highlight */
+[role="radio"][aria-checked="true"],
+[role="checkbox"][aria-checked="true"],
+.auditiq-card-selected {
+  border-color: #3450FF !important;
+  background-color: rgba(52, 80, 255, 0.055) !important;
+  box-shadow: 0 0 0 1px #3450FF, 0 6px 16px -4px rgba(52, 80, 255, 0.14) !important;
+}
+
+/* Keyboard-only accessibility focus ring */
+[role="radio"]:focus-visible,
+[role="checkbox"]:focus-visible {
+  outline: 2px solid #3450FF !important;
+  outline-offset: 2px !important;
+}
+
+/* 2. Form Inputs & Textareas Precision Focus */
+input[type="text"],
+select,
+textarea {
+  outline: none !important;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease !important;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #3450FF !important;
+  box-shadow: 0 0 0 3px rgba(52, 80, 255, 0.14) !important;
+}
+
+/* 3. BUG-03 Fix: Sticky Assessment Action Bar Glassmorphism & Non-Overlap */
+.auditiq-sticky-footer {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  box-shadow: 0 -4px 20px -4px rgba(20, 22, 27, 0.06) !important;
+}
+
+/* 4. Executive Report Card & Score Gauge Refinements (ui-ux-pro-max) */
+@media screen {
+  .bg-paper-texture {
+    background-color: #F6F7F9;
+    background-image:
+      radial-gradient(rgba(52, 80, 255, 0.035) 1px, transparent 0),
+      radial-gradient(rgba(20, 22, 27, 0.025) 1px, transparent 0);
+    background-position: 0 0, 12px 12px;
+    background-size: 24px 24px;
+  }
+}
