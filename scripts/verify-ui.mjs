@@ -41,6 +41,11 @@ async function main() {
     // 1. Landing Page
     await page.goto(baseUrl, { waitUntil: 'networkidle' });
     await page.screenshot({ path: path.join(outDir, '01-landing-verified.png') });
+    await page.locator('#sample-report').scrollIntoViewIfNeeded();
+    await page.waitForTimeout(200);
+    await page.screenshot({ path: path.join(outDir, '01b-sample-report-verified.png') });
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(150);
 
     // Scroll halfway down landing page before starting assessment to test BUG-02 scroll-to-top fix
     await page.evaluate(() => window.scrollTo(0, 1200));
@@ -131,7 +136,7 @@ async function main() {
     await page.locator('button:has-text("Generate Business Audit")').click();
     await page.waitForSelector('#print-report-button', { timeout: 10000 });
     await page.waitForTimeout(400);
-    await page.screenshot({ path: path.join(outDir, '06-report-verified.png') });
+    await page.screenshot({ path: path.join(outDir, '06-report-verified.png'), fullPage: true });
 
     const reportText = await page.evaluate(() => document.body.innerText);
     const hasAuditId = /AUD-\d{4}/.test(reportText);

@@ -159,10 +159,14 @@ test('BUG-01, BUG-02, BUG-03, BUG-05, BUG-06, SEC-04: Frontend bundle & styleshe
     'BUG-05: Must safely merge default answers schema when hydrating from localStorage'
   );
 
-  // BUG-06: ImplementationModal syncs defaultPlan prop when opened and includes Zenith Bank rail
+  // BUG-06: ImplementationModal syncs defaultPlan prop when opened and does not leak private bank account details
   assert.ok(
-    appJs.includes('2284107550'),
-    'BUG-06: ImplementationModal must include official Zenith Bank (2284107550 — Alonigbeja Muhsin) payment kickoff rail'
+    appJs.includes('W.useEffect(()=>{B(j)},[j,d])'),
+    'BUG-06: ImplementationModal must sync selectedPlan state when defaultPlan prop or isOpen changes'
+  );
+  assert.ok(
+    !appJs.includes('2284107550'),
+    'Report and modal must not expose personal bank account numbers'
   );
 
   // SEC-04: window.open includes noopener,noreferrer

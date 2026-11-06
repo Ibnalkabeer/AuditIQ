@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 185" fill="none">
+  <g transform="translate(8, 12) scale(0.18)">
+    <path d="M301 9H384L675 526H539L343 181L148 526H8L301 9ZM278 381H408L326 526H196L278 381Z" fill="#0C0D0E"/>
+  </g>
+  <text x="152" y="86" font-family="'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="700" font-size="82" letter-spacing="-2.4" fill="#0C0D0E">Audit<tspan fill="#0644FD">IQ</tspan></text>
+  <text x="156" y="114" font-family="'Poppins', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="13.5" letter-spacing="4.6" fill="#5B6A7A">AI BUSINESS INTELLIGENCE PLATFORM</text>
+  <line x1="156" y1="154" x2="216" y2="154" stroke="#CBD3DC" stroke-width="1.5"/>
+  <text x="228" y="158" font-family="'Poppins', 'Inter', -apple-system, sans-serif" font-weight="600" font-size="11.5" letter-spacing="3.2" fill="#5B6A7A">A PRODUCT OF <tspan fill="#0C0D0E" font-weight="700">MSL AI SYSTEMS</tspan></text>
+  <line x1="518" y1="154" x2="578" y2="154" stroke="#CBD3DC" stroke-width="1.5"/>
+</svg>

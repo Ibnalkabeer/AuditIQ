@@ -10,6 +10,7 @@ node_modules/
 # Reverse-Engineering Scratch & Verification Captures
 rea-bundle/
 verification-screenshots/
+docs/
 *.log
 .DS_Store
 Thumbs.db
