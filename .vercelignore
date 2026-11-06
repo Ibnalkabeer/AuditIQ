@@ -4,5 +4,6 @@ verification-screenshots/
 docs/
 scripts/
 tests/
+server.mjs
 *.log
 .git/
