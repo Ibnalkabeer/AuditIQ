@@ -10,7 +10,7 @@
 
 **Evaluate operational workflows, uncover hidden bottlenecks, and generate a tailored AI & automation implementation blueprint in under 3 minutes.**
 
-Built by **[MSL AI Systems](https://msl-portfolio-ivory.vercel.app/)** • Engineered by **Muhsin Alonigbeja**
+Built by **[MSL AI Systems](https://msl-portfolio.vercel.app)** • Engineered by **Muhsin Alonigbeja**
 
 </div>
 
@@ -133,6 +133,6 @@ AuditIQ is pre-configured for zero-config deployment on **Vercel** via [`vercel.
 ## License & Attribution
 
 © 2026 **MSL AI Systems**. Engineered by **Muhsin Alonigbeja**. All rights reserved.
-- **Portfolio:** [msl-portfolio-ivory.vercel.app](https://msl-portfolio-ivory.vercel.app/)
+- **Portfolio:** [msl-portfolio.vercel.app](https://msl-portfolio.vercel.app)
 - **Direct Advisory (WhatsApp):** [+234 707 973 1073](https://wa.me/2347079731073)
 - **Email:** [muhsinalonigbeja@gmail.com](mailto:muhsinalonigbeja@gmail.com)
