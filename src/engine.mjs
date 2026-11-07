@@ -18,7 +18,8 @@ export function generateDeterministicAuditId(answers) {
  * when `GEMINI_API_KEY` is set, matching the exact AuditIQ schema.
  */
 async function callGeminiAuditApi(answers, auditId, apiKey) {
-  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
+  const model = process.env.GEMINI_MODEL || 'gemini-3-flash-preview';
+  const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
   const prompt = `You are the AuditIQ Business Advisor by MSL AI Systems.
 Analyze the following business assessment and return ONLY a valid JSON object matching the AuditIQ Report Schema.
 Write every single field in clear, simple, plain English for a busy non-technical business owner. Avoid technical jargon (do not use words like "webhook", "telemetry", "orchestration", "dunning", "LLM", or "autonomous layers") and do not use em dashes.
