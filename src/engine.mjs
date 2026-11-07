@@ -58,7 +58,8 @@ Required JSON keys:
       contents: [{ role: 'user', parts: [{ text: prompt }] }],
       generationConfig: {
         temperature: 0.3,
-        responseMimeType: 'application/json'
+        responseMimeType: 'application/json',
+        thinkingConfig: { thinkingBudget: 0 }
       }
     }),
     signal: AbortSignal.timeout(25000)
@@ -83,7 +84,7 @@ Required JSON keys:
  */
 export async function generateAuditReport(answers) {
   const auditId = generateDeterministicAuditId(answers);
-  const geminiKey = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '';
+  const geminiKey = (process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY || '').trim();
 
   if (geminiKey) {
     try {
